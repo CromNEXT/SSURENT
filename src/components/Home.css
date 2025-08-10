@@ -1,0 +1,43 @@
+/* main-content 영역 전체 스타일 */
+.main-content {
+    display: flex; /* 내부 요소들을 유연하게 배치 */
+    flex-direction: column; /* 아이템을 세로로 정렬 */
+    justify-content: center; /* 세로 방향 중앙 정렬 */
+    align-items: center; /* 가로 방향 중앙 정렬 */
+    min-height: 60vh; /* 최소 높이를 지정해 화면 중앙에 오도록 함 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* h1 태그 스타일 */
+.main-content h1 {
+    font-size: 4rem; /* 글자 크기 (rem 단위는 사용자 설정에 따라 조절됨) */
+    font-weight: 800; /* 글자 굵기  */
+    margin: 0; /* 위아래 간격 초기화 */
+}
+
+/* h2 태그 스타일 */
+.main-content h2 {
+    font-size: 2.3rem;
+    margin-top: 3rem; /* 위쪽 제목과의 간격 */
+    font-weight: 550;
+}
+
+.button-container {
+
+    display: flex; /* 버튼을 가로로 나란히 배치 */
+    gap: 50px; /* 버튼 사이의 간격 */
+    margin-top: 30px; /* 위쪽 텍스트와의 간격 */
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        /* Flex의 방향을 세로(column)로 변경하여 버튼을 수직으로 쌓습니다. */
+        flex-direction: column;
+
+        /* 버튼이 컨테이너 너비에 꽉 차도록 만듭니다. (더 깔끔해 보임) */
+        align-items: stretch;
+
+        /* 세로로 쌓였을 때 간격을 조금 줄여줍니다. (취향에 따라 조절) */
+        gap: 15px;
+    }
+}
