@@ -1,26 +1,26 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Rent from "./pages/Rent";
+import Return from "./pages/Return";
+import MyPage from "./pages/MyPage";
 
 function App() {
-  return (
-    <div className="SSURENT">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Header />
+            <main style={{ maxWidth: 1200, margin: "0 auto", padding: 24 }}>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/rent" element={<Rent />} />
+                    <Route path="/return" element={<Return />} />
+                    <Route path="/mypage" element={<MyPage />} />
+                </Routes>
+            </main>
+        </>
+    );
 }
-
 export default App;
