@@ -25,7 +25,9 @@ export default function Header() {
                 </ul>
 
                 <div className="text-end me-5">
-                    <button type="button" className="btn btn-outline-primary ">로그인</button>
+                    <NavLink to="/login">
+                        <button type="button" className="btn btn-outline-primary">로그인</button>
+                    </NavLink>
                 </div>
             </header>
         </div>

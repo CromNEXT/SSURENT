@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Rent from "./pages/Rent";
 import Return from "./pages/Return";
 import MyPage from "./pages/MyPage";
+import Login from "./pages/login";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/rent" element={<Rent />} />
                     <Route path="/return" element={<Return />} />
                     <Route path="/mypage" element={<MyPage />} />
+                    <Route path="/login" element={<Login />} />
                 </Routes>
             </main>
         </>
