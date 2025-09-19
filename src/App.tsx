@@ -8,6 +8,7 @@ import Rent from "./pages/Rent";
 import Return from "./pages/Return";
 import MyPage from "./pages/MyPage";
 import Login from "./pages/login";
+import ChangePW from "./pages/changePW";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/return" element={<Return />} />
                     <Route path="/mypage" element={<MyPage />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/changePW" element={<ChangePW />} />
                 </Routes>
             </main>
         </>
