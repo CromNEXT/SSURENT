@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export default function Login() {
     return (
         <div className="d-flex flex-column align-items-center" style={{ marginTop: '50px' }}>
@@ -19,7 +21,7 @@ export default function Login() {
             </div>
             <div className="text-center mt-3">
                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a href="#" className="text-decoration-none">비밀번호 재설정</a>
+                <NavLink to="/changePW" className="text-decoration-none">비밀번호 재설정</NavLink>
             </div>
         </div>
     );

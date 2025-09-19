@@ -1,8 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import logo from "../assets/images/ssulogo.jpg"; // 이미지 경로는 실제 프로젝트에 맞게 확인해주세요.
 import "../App.css";
 
 export default function Header() {
+    const location = useLocation();
+    const hideLoginButton = location.pathname === '/login' || location.pathname === '/changePW';
+
     const linkClass = ({ isActive }: { isActive: boolean }) =>
         "nav-link px-3 link-dark fw-bold" + (isActive ? " active" : "");
 
@@ -24,11 +27,13 @@ export default function Header() {
                     <li><NavLink to="/mypage" className={linkClass}>마이페이지</NavLink></li>
                 </ul>
 
-                <div className="text-end me-5">
-                    <NavLink to="/login">
-                        <button type="button" className="btn btn-outline-primary">로그인</button>
-                    </NavLink>
-                </div>
+                {!hideLoginButton && (
+                    <div className="text-end me-5">
+                        <NavLink to="/login">
+                            <button type="button" className="btn btn-outline-primary">로그인</button>
+                        </NavLink>
+                    </div>
+                )}
             </header>
         </div>
     );
