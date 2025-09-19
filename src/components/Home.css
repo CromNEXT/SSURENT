@@ -108,3 +108,8 @@
         margin: 10px auto; /* 가운데 정렬 및 간격 */
     }
 }
+
+.sub-small-text{
+    font-size: small;
+    color: #D70000;
+}
