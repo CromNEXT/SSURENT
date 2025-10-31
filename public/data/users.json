@@ -1,0 +1,14 @@
+{
+  "users" : [
+    {
+      "id" : "admin",
+      "password" : "admin",
+      "role" : "admin",
+      "profile" : {
+        "name" : "관리자",
+        "major" : "CSE",
+        "phnum" : "010-0000-0000"
+      }
+    }
+  ]
+}
