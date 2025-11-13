@@ -21,7 +21,6 @@ function Home() {
             </div>
             <div className="middle-describes">
                 <h2 >대여사업이 뭔가요</h2>
-                <br/>
                 <h4>
                     컴퓨터학부 학우분들의 보다 나은 생활을 위해<br/>
                     컴퓨터학부의 학생회비 납부자를 대상으로<br/>
@@ -30,21 +29,21 @@ function Home() {
             </div>
             <div className="info-cards-container">
                 <div className="info-card">
-                    <PersonFill size={80} color="#000000" />
+                    <PersonFill className="info-icon" color="#000000" />
                     <br/>
                     <br/>
                     <h3>이용 대상</h3>
                     <p>컴퓨터학부 학생회비 납부자</p>
                 </div>
                 <div className="info-card">
-                    <Building size={80} color="#000000" />
+                    <Building className="info-icon" color="#000000" />
                     <br/>
                     <br/>
                     <h3>대여 장소</h3>
                     <p>정보과학관 B1층 컴퓨터학부 학생회실</p>
                 </div>
                 <div className="info-card">
-                    <Alarm size={80} color="#000000" />
+                    <Alarm className="info-icon" color="#000000" />
                     <br/>
                     <br/>
                     <h3>이용 시간</h3>

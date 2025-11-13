@@ -10,15 +10,15 @@
 
 /* h1 태그 스타일 */
 .main-content h1 {
-    font-size: 4rem; /* 글자 크기 (rem 단위는 사용자 설정에 따라 조절됨) */
+    font-size: clamp(1.5rem, 5vw, 4rem); /* 글자 크기 (rem 단위는 사용자 설정에 따라 조절됨) */
     font-weight: 800; /* 글자 굵기  */
     margin: 0; /* 위아래 간격 초기화 */
 }
 
 /* h2 태그 스타일 */
 .main-content h2 {
-    font-size: 2.3rem;
-    margin-top: 3rem; /* 위쪽 제목과의 간격 */
+    font-size: clamp(1.15rem,5vw,2.3rem);
+    margin-top: clamp(1rem, 3vw, 3rem); /* 위쪽 제목과의 간격 */
     font-weight: 550;
 }
 
@@ -32,7 +32,7 @@
 @media (max-width: 768px) {
     .button-container {
         /* Flex의 방향을 세로(column)로 변경하여 버튼을 수직으로 쌓습니다. */
-        flex-direction: column;
+        flex-direction: row;
 
         /* 버튼이 컨테이너 너비에 꽉 차도록 만듭니다. (더 깔끔해 보임) */
         align-items: stretch;
@@ -42,7 +42,7 @@
     }
 }
 .button-container .btn.btn-primary {
-    font-size: 18px;      /* 글자 크기 */
+    font-size: clamp(7px,13px,18px);      /* 글자 크기 */
     font-weight: bold;    /* 글자 굵기 (normal, bold, 700 등) */
     color: #ffffff;       /* 글자 색상 (하얀색) */
     padding: 0.7rem 0.8rem;
@@ -56,32 +56,46 @@
 .middle-describes h2 {
     text-align: left;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: clamp(1.5rem,5vw, 3rem);
+    margin-bottom: clamp(1rem, 3vw, 2rem);
 }
 
 .middle-describes h4 {
     text-align: left;
     font-weight: 400;
-    line-height : 150%;
+    line-height : clamp(200%, 3vw, 150%);
+    font-size: clamp(0.5rem, 3vw, 1.7rem);
+    margin-top: 0;
 }
 
 .info-cards-container {
-    gap: 3rem;
+    gap: clamp(0.5rem,2vw,3rem);
     display: flex; /* 카드를 가로로 배치 */
     justify-content: space-around; /* 카드 사이에 동일한 간격 유지 */
-    padding: 6rem; /* 전체 카드 컨테이너에 여백 */
-    margin-top: -4rem; /* middle-describes와의 간격 */
+    padding: clamp(1rem,4vw,4rem) clamp(0.5rem,2vw,2rem); /* 전체 카드 컨테이너에 여백 */
+    margin-top: 2rem; /* middle-describes와의 간격 */
 }
 
 .info-card {
     background-color: #f9f9f9; /* 카드 배경색 */
     border: 1px solid #ddd; /* 카드 테두리 */
-    border-radius: 5px; /* 카드 모서리 둥글게 */
-    padding: 2rem; /* 카드 내부 여백 */
+    border-radius: 8px; /* 카드 모서리 둥글게 */
+    padding: clamp(1rem,2vw,2rem); /* 카드 내부 여백 */
     text-align: center; /* 텍스트 가운데 정렬 */
     flex: 1;
-    width: 40%; /* 카드 너비 (세 개가 적절히 들어갈 수 있도록) */
+    min-width: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-sizing: border-box; /* padding과 border가 width에 포함되도록 */
+}
+
+.info-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.info-card svg{
+    width: clamp(40px, 10vw, 80px);
+    height: clamp(40px, 10vw, 80px);
 }
 
 .info-card h3 {
@@ -89,23 +103,32 @@
     font-weight: 700;
     margin-top: 0; /* 제목 상단 여백 제거 */
     margin-bottom: 10px; /* 제목 하단 여백 */
-    font-size: 1.2rem;
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
 }
 
 .info-card p {
     text-align: left;
-    font-size: 0.9rem;
+    font-size: clamp(0.65rem, 1.5vw, 0.9rem);
     color: #555;
+    line-height: 1.4;
 }
 
 /* 반응형 디자인 (화면이 작아질 경우 카드 배치 변경) */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .info-cards-container {
-        flex-direction: column; /* 화면이 작으면 세로로 배치 */
+        gap: 0.5rem;
+        padding: 1rem 0.3rem;
     }
     .info-card {
-        width: 80%; /* 작은 화면에서 넓게 표시 */
-        margin: 10px auto; /* 가운데 정렬 및 간격 */
+        padding: 0.8rem 0.5rem;
+    }
+    .info-card h3 {
+        font-size: 0.75rem;
+        margin-bottom: 5px;
+    }
+
+    .info-card p {
+        font-size: 0.6rem;
     }
 }
 
