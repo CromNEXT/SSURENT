@@ -50,6 +50,10 @@ function Home() {
                     <p>평일 10:00 ~ 16:00</p>
                 </div>
             </div>
+            <div className= "bottom-info">
+                <h3>학교생활 중 필요한 물건</h3>
+                <h1>대부분 여기 다 있을걸요?</h1>
+            </div>
         </main>
     );
 }

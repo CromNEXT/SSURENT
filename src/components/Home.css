@@ -23,7 +23,6 @@
 }
 
 .button-container {
-
     display: flex; /* 버튼을 가로로 나란히 배치 */
     gap: 50px; /* 버튼 사이의 간격 */
     margin-top: 30px; /* 위쪽 텍스트와의 간격 */
@@ -144,4 +143,21 @@
 .sub-supersmall-text{
     font-size: 11px;
     color: #D70000;
+}
+.bottom-info{
+    margin-top: 3%;
+    align-self: flex-start;
+    margin-left: min(clamp(0rem, 0.7vw,8rem));
+}
+.bottom-info h1{
+    text-align: left;
+    font-size: clamp(1.5rem, 5vw, 3rem); /* 글자 크기 (rem 단위는 사용자 설정에 따라 조절됨) */
+    font-weight: 800; /* 글자 굵기  */
+    margin: 0; /* 위아래 간격 초기화 */
+}
+
+.bottom-info h3{
+    text-align: left;
+    font-weight: 400;
+    font-size: clamp(1rem, 3vw, 2rem);
 }
