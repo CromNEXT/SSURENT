@@ -1,5 +1,5 @@
 import React from 'react';
-import '../components/Home.css'
+import '../components/header/Home.css'
 import {Link} from "react-router-dom";
 import {PersonFill} from "react-bootstrap-icons";
 import {Building} from "react-bootstrap-icons";

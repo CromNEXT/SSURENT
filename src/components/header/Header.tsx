@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
-import logo from "../assets/images/ssulogo.jpg";
-import "../App.css";
+import logo from "../../assets/images/ssulogo.jpg";
+import "../../App.css";
 import {useState} from "react";
 
 export default function Header() {
