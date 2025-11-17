@@ -1,3 +1,6 @@
+body{
+    overflow-X: hidden;
+}
 .App {
   text-align: center;
 }
