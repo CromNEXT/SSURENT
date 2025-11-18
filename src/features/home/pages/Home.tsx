@@ -1,9 +1,10 @@
 import React from 'react';
-import '../styles/Home.css'
+import '../components/header/Home.css'
 import {Link} from "react-router-dom";
 import {PersonFill} from "react-bootstrap-icons";
 import {Building} from "react-bootstrap-icons";
 import {Alarm} from "react-bootstrap-icons";
+import CardCarousel from "../../../../src/components/carousel/carousel";
 
 function Home() {
     return (
@@ -54,6 +55,9 @@ function Home() {
                 <h3>학교생활 중 필요한 물건</h3>
                 <h1>대부분 여기 다 있을걸요?</h1>
             </div>
+            <section className="carousel-section">
+                <CardCarousel />
+            </section>
         </main>
     );
 }
