@@ -1,14 +1,13 @@
 import React from 'react';
-//import logo from './logo.svg';
-import './App.css';
-import Header from "./components/header/Header";
+import './shared/styles/App.css';
+import Header from "./shared/components/Header/Header";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Rent from "./pages/Rent";
-import Return from "./pages/Return";
-import MyPage from "./pages/MyPage";
-import Login from "./pages/login";
-import ChangePW from "./pages/changePW";
+import Home from "./features/home/pages/Home";
+import Rent from "./features/rent/pages/Rent";
+import Return from "./features/return/pages/Return";
+import MyPage from "./features/mypage/pages/MyPage";
+import Login from "./features/auth/pages/Login";
+import ChangePW from "./features/auth/pages/ChangePW";
 
 function App() {
     return (
