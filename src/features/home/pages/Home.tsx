@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import {PersonFill} from "react-bootstrap-icons";
 import {Building} from "react-bootstrap-icons";
 import {Alarm} from "react-bootstrap-icons";
-import CardCarousel from "../components/carousel/carousel";
+import CardCarousel from "../../../../src/components/carousel/carousel";
 
 function Home() {
     return (
