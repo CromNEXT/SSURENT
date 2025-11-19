@@ -15,7 +15,6 @@ export default function Header() {
     const closeNavbar = () => setIsOpen(false);
 
     return (
-        // 1. 전체를 <div className="container">로 감싸줍니다.
         <div className="container">
             <nav className="navbar navbar-expand-lg py-3 mb-4 border-bottom">
                 <div className="container-fluid">
