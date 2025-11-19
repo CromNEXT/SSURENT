@@ -44,7 +44,7 @@
     font-size: clamp(0.8rem, 2vw, 1.2rem);      /* 글자 크기 */
     font-weight: bold;    /* 글자 굵기 (normal, bold, 700 등) */
     color: #ffffff;       /* 글자 색상 (하얀색) */
-    padding: clamp(0.5rem, 1.5vw, 1rem) clamp(0.6rem, 2vw, 1.2rem);;
+    padding: clamp(0.5rem, 1.5vw, 1rem) clamp(0.6rem, 2vw, 1.2rem);
 }
 
 .middle-describes {
